@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Santosh Jansewa Kendra - Cyber Point, Chaubepur, Tarabganj, Gonda. Digital and online services.">
+  <title>Santosh Jansewa Kendra | Cyber Point</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --panel:#0d1b2e;
+      --panel2:#10243d;
+      --text:#f5f8ff;
+      --muted:#a9b8cc;
+      --accent:#4da3ff;
+      --accent2:#7dd3fc;
+      --gold:#f6c85f;
+      --border:rgba(255,255,255,.10);
+      --shadow:0 18px 50px rgba(0,0,0,.30);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:radial-gradient(circle at 80% 0%,rgba(77,163,255,.15),transparent 28%),var(--bg);
+      color:var(--text);line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:blur(14px);
+      background:rgba(7,17,31,.82);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .brand span{color:var(--accent2)}
+    .links{display:flex;gap:24px;color:var(--muted);font-size:14px}
+    .links a:hover{color:#fff}
+    .hero{padding:90px 0 70px;position:relative;overflow:hidden}
+    .hero:before{
+      content:"";position:absolute;width:360px;height:360px;border-radius:50%;
+      background:rgba(77,163,255,.14);filter:blur(55px);right:-100px;top:-120px;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+    .badge{
+      display:inline-flex;padding:7px 13px;border:1px solid rgba(125,211,252,.25);
+      background:rgba(125,211,252,.08);border-radius:999px;color:var(--accent2);
+      font-size:13px;font-weight:700;margin-bottom:20px;
+    }
+    h1{font-size:clamp(38px,6vw,68px);line-height:1.05;letter-spacing:-2px;margin-bottom:18px}
+    .hero p{font-size:18px;color:var(--muted);max-width:650px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{
+      padding:13px 19px;border-radius:12px;font-weight:750;display:inline-flex;align-items:center;gap:8px;
+      border:1px solid var(--border);transition:.2s;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .primary{background:linear-gradient(135deg,var(--accent),#2563eb);box-shadow:0 12px 28px rgba(37,99,235,.25)}
+    .secondary{background:rgba(255,255,255,.04)}
+    .hero-card{
+      background:linear-gradient(145deg,rgba(16,36,61,.95),rgba(10,24,40,.95));
+      border:1px solid var(--border);border-radius:26px;padding:28px;box-shadow:var(--shadow)
+    }
+    .icon-box{
+      width:62px;height:62px;border-radius:18px;display:grid;place-items:center;
+      background:rgba(77,163,255,.12);font-size:30px;margin-bottom:18px
+    }
+    .hero-card h3{font-size:22px;margin-bottom:8px}
+    .hero-card p{font-size:15px;color:var(--muted)}
+    section{padding:75px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 38px}
+    .section-head h2{font-size:36px;letter-spacing:-1px;margin-bottom:8px}
+    .section-head p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:linear-gradient(145deg,rgba(13,27,46,.92),rgba(10,23,39,.92));
+      border:1px solid var(--border);border-radius:20px;padding:24px;
+      transition:.2s;
+    }
+    .card:hover{transform:translateY(-4px);border-color:rgba(125,211,252,.28)}
+    .card .emoji{font-size:28px;margin-bottom:14px}
+    .card h3{margin-bottom:7px}
+    .card p{color:var(--muted);font-size:14px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+    .about-box{padding:30px;border:1px solid var(--border);background:rgba(255,255,255,.035);border-radius:22px}
+    .about-box h3{font-size:24px;margin-bottom:12px}
+    .about-box p,.about-box li{color:var(--muted)}
+    ul{list-style:none;display:grid;gap:10px;margin-top:16px}
+    li:before{content:"✓";color:var(--accent2);font-weight:900;margin-right:10px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .contact-card{padding:30px;border:1px solid var(--border);border-radius:22px;background:rgba(255,255,255,.035)}
+    .contact-row{padding:14px 0;border-bottom:1px solid var(--border)}
+    .contact-row:last-child{border-bottom:0}
+    .label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+    .value{font-weight:700;margin-top:3px}
+    .phones{display:grid;gap:8px;margin-top:6px}
+    .phones a{color:var(--accent2)}
+    footer{border-top:1px solid var(--border);padding:26px 0;color:var(--muted);font-size:13px}
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:800px){
+      .links{display:none}
+      .hero-grid,.about,.contact-grid{grid-template-columns:1fr}
+      .hero{padding-top:65px}
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:520px){
+      .grid{grid-template-columns:1fr}
+      section{padding:58px 0}
+      h1{letter-spacing:-1px}
+      .btn{width:100%;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#home">Santosh <span>Sahaj Jansewa Kendra</span></a>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">● CYBER POINT • DIGITAL SERVICES</div>
+          <h1>Digital services, made simple.</h1>
+          <p>
+            Welcome to <strong>Santosh Jansewa Kendra</strong> — your local Cyber Point
+            for convenient online and digital services in Chaubepur, Tarabganj, Gonda.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="tel:+918881251785">📞 Call Now</a>
+            <a class="btn secondary" href="https://wa.me/918881251785" target="_blank" rel="noopener">💬 WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="icon-box">💻</div>
+          <h3>Your Local Cyber Point</h3>
+          <p>Fast, convenient and professional assistance for everyday online and digital needs.</p>
+          <div style="margin-top:22px;color:var(--gold);font-weight:800;">Chaubepur • Tarabganj • Gonda</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Services</h2>
+          <p>Useful digital and cyber-point services, all in one place.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><div class="emoji">📝</div><h3>Online Forms</h3><p>Assistance with online applications, registrations and form filling.</p></div>
+          <div class="card"><div class="emoji">🖨️</div><h3>Print & Photocopy</h3><p>Convenient printing and photocopy support for documents.</p></div>
+          <div class="card"><div class="emoji">📄</div><h3>Scanning</h3><p>Scan and prepare documents for digital submission.</p></div>
+          <div class="card"><div class="emoji">💻</div><h3>Online Services</h3><p>Help with common digital services and online tasks.</p></div>
+          <div class="card"><div class="emoji">🪪</div><h3>Document Assistance</h3><p>Get practical help preparing documents for online work.</p></div>
+          <div class="card"><div class="emoji">⚡</div><h3>Quick Support</h3><p>Friendly local assistance for your everyday cyber-point needs.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why Choose Us?</h2>
+          <p>Simple service, local convenience and helpful support.</p>
+        </div>
+        <div class="about">
+          <div class="about-box">
+            <h3>Professional & Convenient</h3>
+            <p>
+              Santosh Jansewa Kendra is a local Cyber Point serving customers in
+              Chaubepur, Tarabganj, Gonda.
+            </p>
+            <ul>
+              <li>Convenient local service</li>
+              <li>Digital & online assistance</li>
+              <li>Document and printing support</li>
+              <li>Friendly customer assistance</li>
+            </ul>
+          </div>
+          <div class="about-box">
+            <h3>Need Help?</h3>
+            <p>Call or WhatsApp us before visiting for service-related information.</p>
+            <div class="cta">
+              <a class="btn primary" href="tel:+918881251785">Call 8881251785</a>
+              <a class="btn secondary" href="https://wa.me/919129251785" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact Us</h2>
+          <p>We’re here to help with your digital service needs.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-row">
+              <div class="label">Shop</div>
+              <div class="value">Santosh Jansewa Kendra</div>
+            </div>
+            <div class="contact-row">
+              <div class="label">Type</div>
+              <div class="value">Cyber Point</div>
+            </div>
+            <div class="contact-row">
+              <div class="label">Address</div>
+              <div class="value">Chaubepur, Tarabganj, Gonda, Uttar Pradesh — 271123</div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-row">
+              <div class="label">Phone / WhatsApp</div>
+              <div class="phones">
+                <a href="tel:+918881251785">8881251785</a>
+                <a href="tel:+919129251785">9129251785</a>
+                <a href="tel:+919984742601">9984742601</a>
+              </div>
+            </div>
+            <div class="cta">
+              <a class="btn primary" href="tel:+918881251785">📞 Call</a>
+              <a class="btn secondary" href="https://wa.me/919984742601" target="_blank" rel="noopener">💬 WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Santosh Jansewa Kendra</div>
+      <div>Cyber Point • Chaubepur, Tarabganj, Gonda</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
