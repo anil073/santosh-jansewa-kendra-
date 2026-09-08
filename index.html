@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Santosh Jansewa Kendra - Cyber Point, Chaubepur, Tarabganj, Gonda. Digital and online services.">
-  <title>Santosh Jansewa Kendra | Cyber Point</title>
+  <title>Santosh Jansewa Kendra | Premium Cyber Point</title>
   <style>
     :root{
       --bg:#07111f;
@@ -89,6 +89,13 @@
     .about-box p,.about-box li{color:var(--muted)}
     ul{list-style:none;display:grid;gap:10px;margin-top:16px}
     li:before{content:"✓";color:var(--accent2);font-weight:900;margin-right:10px}
+
+    .home-photos{padding:20px 0 75px}
+    .photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:900px;margin:auto}
+    .photo-card{position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--border);background:var(--panel);box-shadow:var(--shadow);aspect-ratio:4/5}
+    .photo-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+    .photo-card:hover img{transform:scale(1.03)}
+    @media(max-width:600px){.photo-grid{grid-template-columns:1fr 1fr;gap:12px}.photo-card{border-radius:18px}}
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
     .contact-card{padding:30px;border:1px solid var(--border);border-radius:22px;background:rgba(255,255,255,.035)}
     .contact-row{padding:14px 0;border-bottom:1px solid var(--border)}
@@ -111,6 +118,39 @@
       h1{letter-spacing:-1px}
       .btn{width:100%;justify-content:center}
     }
+
+    /* Premium home/team enhancements */
+    body{overflow-x:hidden}
+    .hero{min-height:78vh;display:flex;align-items:center}
+    .hero-grid{position:relative;z-index:1}
+    .hero-card{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:linear-gradient(145deg,rgba(20,47,78,.72),rgba(8,24,43,.58));box-shadow:0 25px 70px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.08);animation:floatCard 5s ease-in-out infinite}
+    .hero-card:after{content:"";position:absolute;inset:-1px;border-radius:26px;background:linear-gradient(135deg,rgba(125,211,252,.25),transparent 40%,rgba(77,163,255,.12));pointer-events:none}
+    .hero-card{position:relative;overflow:hidden}
+    .hero-card>*{position:relative;z-index:1}
+    .hero .badge{animation:fadeUp .7s ease both}
+    .hero h1{animation:fadeUp .8s .08s ease both}
+    .hero p{animation:fadeUp .8s .16s ease both}
+    .hero .cta{animation:fadeUp .8s .24s ease both}
+    .home-photos{padding-top:10px}
+    .team-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:auto}
+    .team-card{position:relative;min-height:430px;overflow:hidden;border-radius:28px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.055);box-shadow:0 25px 70px rgba(0,0,0,.32);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transform:translateY(0);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+    .team-card:hover{transform:translateY(-10px) scale(1.01);box-shadow:0 35px 90px rgba(0,0,0,.42);border-color:rgba(125,211,252,.4)}
+    .team-card img{width:100%;height:430px;object-fit:cover;display:block;transition:transform .7s ease,filter .5s ease;filter:saturate(1.02) contrast(1.02)}
+    .team-card:hover img{transform:scale(1.055);filter:saturate(1.08) contrast(1.04)}
+    .team-overlay{position:absolute;left:14px;right:14px;bottom:14px;padding:18px 20px;border:1px solid rgba(255,255,255,.16);border-radius:20px;background:rgba(4,13,25,.68);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 15px 35px rgba(0,0,0,.25)}
+    .team-overlay .role{font-size:11px;letter-spacing:1.5px;color:var(--accent2);font-weight:800;text-transform:uppercase}
+    .team-overlay h3{font-size:25px;margin:3px 0 2px}
+    .team-overlay p{font-size:13px;color:var(--muted)}
+    .team-number{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-weight:900;background:rgba(4,13,25,.62);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px)}
+    .glass-strip{margin:28px auto 0;max-width:1000px;padding:18px 22px;border:1px solid rgba(255,255,255,.11);border-radius:20px;background:rgba(255,255,255,.04);backdrop-filter:blur(14px);display:flex;justify-content:center;gap:28px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .glass-strip strong{color:#fff}
+    .card,.about-box,.contact-card{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 15px 45px rgba(0,0,0,.18)}
+    .card{animation:fadeUp .7s ease both}
+    .card:nth-child(2){animation-delay:.06s}.card:nth-child(3){animation-delay:.12s}.card:nth-child(4){animation-delay:.18s}.card:nth-child(5){animation-delay:.24s}.card:nth-child(6){animation-delay:.30s}
+    @keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:800px){.hero{min-height:auto}.team-wrap{grid-template-columns:1fr}.team-card{min-height:390px}.team-card img{height:390px}}
+    @media(max-width:520px){.team-card{min-height:420px}.team-card img{height:420px}.glass-strip{gap:12px;font-size:13px}}
   </style>
 </head>
 <body>
@@ -148,6 +188,42 @@
           <h3>Your Local Cyber Point</h3>
           <p>Fast, convenient and professional assistance for everyday online and digital needs.</p>
           <div style="margin-top:22px;color:var(--gold);font-weight:800;">Chaubepur • Tarabganj • Gonda</div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="home-photos" aria-label="Santosh Jansewa Kendra photos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Meet Our Team</h2>
+          <p>संतोष जनसेवा केंद्र — आपकी सेवा में सदैव तत्पर</p>
+        </div>
+        <div class="team-wrap">
+          <article class="team-card">
+            <img src="photo1.jpg" alt="Santosh Jansewa Kendra team member Santosh" loading="lazy">
+            <div class="team-number">01</div>
+            <div class="team-overlay">
+              <div class="role">Our Team</div>
+              <h3>Santosh</h3>
+              <p>Customer Support & Digital Services</p>
+            </div>
+          </article>
+          <article class="team-card">
+            <img src="photo2.jpg" alt="Santosh Jansewa Kendra team member Anil" loading="lazy">
+            <div class="team-number">02</div>
+            <div class="team-overlay">
+              <div class="role">Our Team</div>
+              <h3>Anil</h3>
+              <p>Digital Assistance & Online Services</p>
+            </div>
+          </article>
+        </div>
+        <div class="glass-strip">
+          <span>⚡ <strong>Fast Service</strong></span>
+          <span>🛡️ <strong>Trusted Support</strong></span>
+          <span>💻 <strong>Digital Assistance</strong></span>
+          <span>📍 <strong>Chaubepur, Gonda</strong></span>
         </div>
       </div>
     </section>
@@ -251,6 +327,12 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('in-view');
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.team-card, .about-box, .contact-card').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
